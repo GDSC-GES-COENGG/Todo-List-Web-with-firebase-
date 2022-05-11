@@ -9,11 +9,11 @@ body{
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background: linear-gradient(135deg, #4AB1FF, #2D5CFE);
+  background: linear-gradient(135deg, #FBAB7E, #F7CE68);
 }
 ::selection{
   color: #fff;
-  background: #3C87FF;
+  background: #FBAB7E;
 }
 .wrapper{
   max-width: 405px;
@@ -28,7 +28,12 @@ body{
   padding: 0 25px;
   position: relative;
 }
-.task-input img{
+.task-input i{
+  top: 50%;
+  position: absolute;
+  transform: translate(17px, -50%);
+}
+.task-input svg{
   top: 50%;
   position: absolute;
   transform: translate(17px, -50%);
@@ -45,7 +50,7 @@ body{
 .task-input input:focus,
 .task-input input.active{
   padding-left: 52px;
-  border: 2px solid #3C87FF;
+  border: 2px solid #FBAB7E;
 }
 .task-input input::placeholder{
   color: #bfbfbf;
@@ -59,23 +64,22 @@ body{
   padding: 18px 25px;
   border-bottom: 1px solid #ccc;
 }
-.filters span{
+.tasks span{
   margin: 0 8px;
   font-size: 17px;
   color: #444444;
   cursor: pointer;
 }
-.filters span:first-child{
+.tasks span:first-child{
   margin-left: 0;
 }
-.filters span.active{
-  color: #3C87FF;
+.tasks span.active{
+  color: #F7CE68;
 }
 .controls .clear-btn{
   border: none;
-  opacity: 0.6;
   outline: none;
-  color: #fff;
+  color: rgb(0, 0, 0);
   cursor: pointer;
   font-size: 13px;
   padding: 7px 13px;
@@ -83,7 +87,7 @@ body{
   letter-spacing: 0.3px;
   pointer-events: none;
   transition: transform 0.25s ease;
-  background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+  background: linear-gradient(135deg, #FBAB7E 0%, #F7CE68 100%);
 }
 .clear-btn.active{
   opacity: 0.9;
@@ -105,11 +109,11 @@ body{
   width: 5px;
 }
 .task-box::-webkit-scrollbar-track{
-  background: #f1f1f1;
+  background: #F7CE68;
   border-radius: 25px;
 }
 .task-box::-webkit-scrollbar-thumb{
-  background: #e6e6e6;
+  background: #FBAB7E;
   border-radius: 25px;
 }
 .task-box .task{
@@ -131,7 +135,7 @@ body{
 }
 .task label input{
   margin-top: 7px;
-  accent-color: #3C87FF;
+  accent-color: #FBAB7E;
 }
 .task label p{
   user-select: none;
@@ -188,6 +192,7 @@ body{
 .settings li i{
   padding-right: 8px;
 }
+
 @media (max-width: 400px) {
   body{
     padding: 0 10px;
@@ -195,7 +200,7 @@ body{
   .wrapper {
     padding: 20px 0;
   }
-  .filters span{
+  .tasks span{
     margin: 0 5px;
   }
   .task-input{
